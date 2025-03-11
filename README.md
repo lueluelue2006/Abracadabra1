@@ -110,7 +110,7 @@ echo '{"method":"NEXT","mode":"ENCRYPT","inputType":"TEXT","outputType":"TEXT","
 
 如果你想自行快速部署这个静态页，可以在Release中下载快速部署文件包。若要自行编译或修改，请前往前端源代码仓库。
 
-浏览器插件的源码同样在前端源代码仓库，位于crx分支。
+浏览器插件和油猴脚本的源码同样在前端源代码仓库，分别位于 crx 和 userscript 分支。
 
 [<img src="https://img.shields.io/badge/静态页面-ffd91c?logo=cloudflarepages&style=for-the-badge&logoColor=000000" width="130"/>](https://abracadabra-demo.pages.dev/)
 [<img src="https://img.shields.io/badge/前端源码-9a10b5?style=for-the-badge" width="103" />](https://github.com/SheepChef/Abracadabra_demo)
@@ -128,6 +128,20 @@ echo '{"method":"NEXT","mode":"ENCRYPT","inputType":"TEXT","outputType":"TEXT","
 [<img src="https://img.shields.io/badge/Firefox 商店-8a54ff?logo=firefoxbrowser&style=for-the-badge&logoColor=ffffff" width="174" />](https://addons.mozilla.org/zh-CN/firefox/addon/abracadabra-%E9%AD%94%E6%9B%B0/)
 
 > **提示：Edge 插件商店的上架审核速度十分缓慢，因此更新速度也更慢。不推荐从Edge商店下载本插件。**
+
+### 油猴脚本
+
+油猴脚本基于本项目的 JavaScript 实现，已上传到 **Greasy Fork** 网站。
+
+![image](https://github.com/user-attachments/assets/1f8420f2-0c67-43d0-a280-1215d38e47a5)
+
+油猴脚本在部分网站页面中提供一个小型悬浮窗，助你快速调用本项目的核心功能。
+
+点击加密/解密，将自动复制结果到剪切板。
+
+[<img src="https://img.shields.io/badge/Greasy Fork-8a54ff?logo=greasyfork&style=for-the-badge&logoColor=ffffff" width="171" />](https://greasyfork.org/zh-CN/scripts/529514-abracadabra-%E9%AD%94%E6%9B%B0)
+
+>目前支持：百度贴吧、Bilibili
 
 ## 注意
 
