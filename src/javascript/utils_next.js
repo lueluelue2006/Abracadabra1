@@ -616,11 +616,10 @@ function Uint8ArrayTostring(fileData) {
 }
 
 function GetRandomIndex(length) {
-  let MT = new MersenneTwister()
-  let Rand1 = Math.floor(MT.random() * 10000);
-  let Rand2 = Rand1 % length;
+  let MT = new MersenneTwister(Math.floor(Math.random() * 1000000000))
+  let Rand = Math.floor(MT.random() * length);
 
-  return Rand2;
+  return Rand;
 }
 
 function rotateString(str, n) {
