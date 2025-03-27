@@ -7,7 +7,7 @@
 <div align=center>
 <h3>Abracadabra 魔曰</h3>
 
-<h3>下一代文本防和谐工具</h3>
+<h3>下一代文本加密工具</h3>
 </div>
 
 <div align=center>
@@ -24,7 +24,7 @@
 
 <div align=center>
 
-[<img src="https://img.shields.io/badge/立刻使用-ffd91c?logo=cloudflarepages&style=for-the-badge&logoColor=000000" width="170"/>](https://abracadabra-demo.pages.dev/)
+[<img src="https://img.shields.io/badge/立刻使用-ffd91c?logo=cloudflarepages&style=for-the-badge&logoColor=000000" width="170"/>](https://abra.halu.ca/)
 [<img src="https://img.shields.io/badge/下载插件-8a54ff?logo=googlechrome&style=for-the-badge&logoColor=ffffff" width="170" />](#浏览器插件)
 
 [<img src="https://img.shields.io/badge/前端源码仓库-9a10b5?style=for-the-badge" width="120" />](https://github.com/SheepChef/Abracadabra_demo)
@@ -33,36 +33,30 @@
 
 </div>
 
-**Abracadabra(魔曰)** 是一个安全高效的文本脱敏加密工具，对任意给定数据进行处理。
-
-由此使数据不易被自动过滤识别，减低封删率，增加审核成本。
+**Abracadabra(魔曰)** 是一个安全高效的文本加密工具，对任意给定数据进行加密处理。
 
 请查阅 [**部署指南**](DEPLOY.md) 快速开始使用本项目。
 
 要深入了解本项目的设计思路，内部机制和最佳实践，请查阅 [**细节和使用指南**](https://github.com/SheepChef/Abracadabra/blob/main/USAGE.md)
 
-更多延申内容，例如本算法与同类产品的比较，请查阅 [**博客文章**](https://shef.cc/2024/11/30/abracadabra/)
-
 ## 特性
 
 - **仿真，使用文言语法句式**。
-- 简短，密文简短方便传播。
+- 简短，密文简短方便复制。
 - 随机，加密结果具有随机性。
-- 安心，密码表中已剔除敏感汉字。
+- 安心，密码表公开可查阅。
 - 安全，AES256 + 三重转轮混淆。
 - 双模式，同时支持仿真加密和传统加密。
 
-###  **古文仿真：下一代防和谐解决方案**
+###  **古文仿真：下一代加密方案**
 
-> 虽无灯花之看，亦旅以良开临韵，鹏欲至物航定，但霞梦诚返，鹂当信花泊放，却风森良进，以书现，若走花度岩，舒鸢临笑，兰镜善停。
+> 定雪以关雨，故选速文者，当事浩鹏之纯茶。作必与其雀，而航欲任以铃者，楼也。但欲极者遥，雪无文，无以致花。
 >
-> 此语有绚绸悠褔，慧涧聪岩，不夏也，鸳可言云探问，且铃涧远奏，茶想彰花称选，且书雪轻赴，此雪有谜鸳少梦，极天莹空，今现韵以泊良雨，以岩，当去瑞花，非韵买鸢所当良画，不可去也。
+> 莺在悦岩，遥城之近，游于璃。乐林曰，是故无极无畅，无纯无静，叶之所走、心之所停也。信俊灯，光善韵银，乃稍旅。秀兰能长雨之怡，行光中之迷，鹤定而瑞裳事也。文欲取庭弹度，却琴心益求，非叶也。
 
 生成高仿真文言文，**参考康熙二十三年《古文观止》真实语料**。
 
-与传统方案一致的高强度加密，更复杂的组句/语法选择机制，更先进的消息隐写。
-
-将链接和短文本隐写在似是而非的文言文中，**_骗过所有传统检测，_**[**_甚至大语言模型_**](https://github.com/SheepChef/Abracadabra/issues/64)(结果因模型而异)。
+与传统方案一致的高强度加密，更复杂的组句/语法选择机制，中西合璧的设计。
 
 密文高度随机，支持用户自行选择密文的随机性。
 
@@ -110,9 +104,9 @@ echo '{"method":"NEXT","mode":"ENCRYPT","inputType":"TEXT","outputType":"TEXT","
 
 如果你想自行快速部署这个静态页，可以在Release中下载快速部署文件包。若要自行编译或修改，请前往前端源代码仓库。
 
-浏览器插件的源码同样在前端源代码仓库，位于crx分支。
+浏览器插件和油猴脚本的源码同样在前端源代码仓库，分别位于 crx 和 userscript 分支。
 
-[<img src="https://img.shields.io/badge/静态页面-ffd91c?logo=cloudflarepages&style=for-the-badge&logoColor=000000" width="130"/>](https://abracadabra-demo.pages.dev/)
+[<img src="https://img.shields.io/badge/静态页面-ffd91c?logo=cloudflarepages&style=for-the-badge&logoColor=000000" width="130"/>](https://abra.halu.ca/)
 [<img src="https://img.shields.io/badge/前端源码-9a10b5?style=for-the-badge" width="103" />](https://github.com/SheepChef/Abracadabra_demo)
 
 ### 浏览器插件
@@ -128,6 +122,20 @@ echo '{"method":"NEXT","mode":"ENCRYPT","inputType":"TEXT","outputType":"TEXT","
 [<img src="https://img.shields.io/badge/Firefox 商店-8a54ff?logo=firefoxbrowser&style=for-the-badge&logoColor=ffffff" width="174" />](https://addons.mozilla.org/zh-CN/firefox/addon/abracadabra-%E9%AD%94%E6%9B%B0/)
 
 > **提示：Edge 插件商店的上架审核速度十分缓慢，因此更新速度也更慢。不推荐从Edge商店下载本插件。**
+
+### 油猴脚本
+
+油猴脚本基于本项目的 JavaScript 实现，已上传到 **Greasy Fork** 网站。
+
+![image](https://github.com/user-attachments/assets/1f8420f2-0c67-43d0-a280-1215d38e47a5)
+
+油猴脚本在部分网站页面中提供一个小型悬浮窗，助你快速调用本项目的核心功能。
+
+点击加密/解密，将自动复制结果到剪切板。
+
+[<img src="https://img.shields.io/badge/Greasy Fork-8a54ff?logo=greasyfork&style=for-the-badge&logoColor=ffffff" width="171" />](https://greasyfork.org/zh-CN/scripts/529514-abracadabra-%E9%AD%94%E6%9B%B0)
+
+>目前支持：百度贴吧、Bilibili
 
 ## 注意
 
@@ -159,7 +167,7 @@ Abracadabra 还在积极开发中，这里是一些注意事项。
 
 Abracadabra 以最常用的 3000 个汉字为密本，对大小写拉丁字母，阿拉伯数字和部分符号进行映射。
 
-密表为纯人工编纂，剔除了可能随机组成敏感词的汉字，不含任何贬义字。
+密表为纯人工编纂，没有让人眼花缭乱的生僻字。
 
 映射表公开可查，查阅 [**映射表(传统)**](https://github.com/SheepChef/Abracadabra/blob/main/src/javascript/mapping.json) 或者 [**映射表(仿真)**](https://github.com/SheepChef/Abracadabra/blob/main/src/javascript/mapping_next.json) 以了解密本的全貌。
 
@@ -185,7 +193,7 @@ AES 加密密钥和转轮密钥是同一个，均采用哈希值。
 
 在映射为汉字的时候，每个字母/数字/符号均有多种可能性，完全随机选择。
 
-这进一步降低了密文的规律性，让关键词分词识别难以奏效。
+这显著增强了密文的安全性，使得各种攻击难以奏效。
 
 ## 功能比较
 
@@ -223,7 +231,7 @@ AES 加密密钥和转轮密钥是同一个，均采用哈希值。
 <td align=center>❌</td>
 </tr>
 <tr>
-<td>仿真伪装</td>
+<td>仿真</td>
 <td align=center>✅</td>
 <td align=center>❌</td>
 <td align=center>❌</td>
@@ -255,14 +263,6 @@ AES 加密密钥和转轮密钥是同一个，均采用哈希值。
 <td align=center>🟡</td>
 </tr>
 <tr>
-<td>抗识别</td>
-<td align=center>✅</td>
-<td align=center>❌</td>
-<td align=center>❌</td>
-<td align=center>❌</td>
-<td align=center>✅</td>
-</tr>
-<tr>
 <td>自判断</td>
 <td align=center>✅</td>
 <td align=center>❌</td>
@@ -287,6 +287,20 @@ AES 加密密钥和转轮密钥是同一个，均采用哈希值。
 <td align=center>🟡</td>
 </tr>
 </table>
+
+```
+明文：Abracadabra
+
+魔曰(仿真)：铃有将报，局有竟然。故探盈声者，当度青莺之静云。非木也，琴与树换，振棋以至雁。
+魔曰(传统)：困句夏之全玚凪斋或骏琅咨兆咩谜理金说宙银歌舒
+
+熊曰：呋食性類啽家現出爾常肉嘿達嗷很
+佛曰：諸南隸僧南降南吽諸陀南摩隸南僧南缽南薩咤南心彌嚴迦聞婆吽願南眾南色南兜南眾南如婆如南
+社会主义：自由民主公正文明法治文明公正民主公正和谐公正民主公正自由公正民主公正文明法治文明公正民主
+兽音：~呜嗷嗷嗷嗷呜呜啊呜嗷呜嗷呜呜~嗷啊呜啊嗷啊呜嗷呜~呜~嗷~呜呜嗷嗷嗷嗷嗷嗷呜啊嗷呜啊呜嗷呜呜~嗷啊嗷啊嗷啊呜嗷嗷~~~嗷~呜呜嗷嗷嗷嗷嗷嗷呜啊嗷呜呜呜嗷呜呜~呜啊呜啊嗷啊呜嗷嗷~嗷啊
+火星文：（不支持英文）
+
+```
 
 ## 鸣谢
 
