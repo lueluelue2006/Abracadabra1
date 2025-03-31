@@ -20,19 +20,19 @@
 */
 
 function base64ToUint8Array(base64) {
-    // 将Base64字符串转换为二进制字符串
-    const binaryString = _atob(base64);
-    // 将二进制字符串转换为Uint8Array
-    const len = binaryString.length;
-    const bytes = new Uint8Array(len);
-    for (let i = 0; i < len; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
-    }
-    return bytes;
+  // 将Base64字符串转换为二进制字符串
+  const binaryString = _atob(base64);
+  // 将二进制字符串转换为Uint8Array
+  const len = binaryString.length;
+  const bytes = new Uint8Array(len);
+  for (let i = 0; i < len; i++) {
+    bytes[i] = binaryString.charCodeAt(i);
+  }
+  return bytes;
 }
 
 function uint8ArrayToBase64(uint8Array) {
-    return _btoa(String.fromCharCode.apply(null, uint8Array));
+  return _btoa(String.fromCharCode.apply(null, uint8Array));
 }
 
 // Read input from stdin
@@ -44,53 +44,53 @@ JavywriteOutput(Javyresult);
 
 // The main function.
 function index(input) {
-  if(input === "ERROR"){
+  if (input === "ERROR") {
     return "INCORRECT JSON";
   }
 
-  if(input.method == "NEXT"){
-    if(input.inputType == "TEXT"){
-        let Abra = new Abracadabra(input.inputType,input.outputType);
-        Abra.Input_Next(input.input,input.mode,input.key,input.q,input.r);
-        let Output = Abra.Output();
-        if(input.outputType == "UINT8"){
-            Output = uint8ArrayToBase64(Output);
-        }
-        return Output;
-    }else if(input.inputType == "UINT8"){
-        let Abra = new Abracadabra(input.inputType,input.outputType);
-        let UINT8In = base64ToUint8Array(input.input);
-        Abra.Input_Next(UINT8In,input.mode,input.key,input.q,input.r);
-        let Output = Abra.Output();
-        if(input.outputType == "UINT8"){
-            Output = uint8ArrayToBase64(Output);
-        }
-        return Output;
-    }else{
-        return "ERROR inputType";
+  if (input.method == "NEXT") {
+    if (input.inputType == "TEXT") {
+      let Abra = new Abracadabra(input.inputType, input.outputType);
+      Abra.Input_Next(input.input, input.mode, input.key, input.q, input.r);
+      let Output = Abra.Output();
+      if (input.outputType == "UINT8") {
+        Output = uint8ArrayToBase64(Output);
+      }
+      return Output;
+    } else if (input.inputType == "UINT8") {
+      let Abra = new Abracadabra(input.inputType, input.outputType);
+      let UINT8In = base64ToUint8Array(input.input);
+      Abra.Input_Next(UINT8In, input.mode, input.key, input.q, input.r);
+      let Output = Abra.Output();
+      if (input.outputType == "UINT8") {
+        Output = uint8ArrayToBase64(Output);
+      }
+      return Output;
+    } else {
+      return "ERROR inputType";
     }
-  }else if(input.method == "OLD"){
-    if(input.inputType == "TEXT"){
-        let Abra = new Abracadabra(input.inputType,input.outputType);
-        Abra.Input(input.input,input.mode,input.key,input.q);
-        let Output = Abra.Output();
-        if(input.outputType == "UINT8"){
-            Output = uint8ArrayToBase64(Output);
-        }
-        return Output;
-    }else if(input.inputType == "UINT8"){
-        let Abra = new Abracadabra(input.inputType,input.outputType);
-        let UINT8In = base64ToUint8Array(input.input);
-        Abra.Input(UINT8In,input.mode,input.key,input.q);
-        let Output = Abra.Output();
-        if(input.outputType == "UINT8"){
-            Output = uint8ArrayToBase64(Output);
-        }
-        return Output;
-    }else{
-        return "ERROR inputType";
+  } else if (input.method == "OLD") {
+    if (input.inputType == "TEXT") {
+      let Abra = new Abracadabra(input.inputType, input.outputType);
+      Abra.Input(input.input, input.mode, input.key, input.q);
+      let Output = Abra.Output();
+      if (input.outputType == "UINT8") {
+        Output = uint8ArrayToBase64(Output);
+      }
+      return Output;
+    } else if (input.inputType == "UINT8") {
+      let Abra = new Abracadabra(input.inputType, input.outputType);
+      let UINT8In = base64ToUint8Array(input.input);
+      Abra.Input(UINT8In, input.mode, input.key, input.q);
+      let Output = Abra.Output();
+      if (input.outputType == "UINT8") {
+        Output = uint8ArrayToBase64(Output);
+      }
+      return Output;
+    } else {
+      return "ERROR inputType";
     }
-  }else{
+  } else {
     return "ERROR method";
   }
 }
@@ -122,12 +122,12 @@ function JavyreadInput() {
       context.bufferOffset += chunk.length;
       return context;
     },
-    { bufferOffset: 0, finalBuffer: new Uint8Array(totalBytes) },
+    { bufferOffset: 0, finalBuffer: new Uint8Array(totalBytes) }
   );
 
   const InputDecoded = new TextDecoder().decode(finalBuffer);
   try {
-    return JSON.parse(InputDecoded);;
+    return JSON.parse(InputDecoded);
   } catch {
     return "ERROR";
   }
