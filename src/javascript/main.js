@@ -172,7 +172,7 @@ export class Abracadabra {
       }
     }
   }
-    /**
+  /**
    * 输入数据以处理，请注意指定的类型
    *
    * **模式定义**
@@ -188,38 +188,36 @@ export class Abracadabra {
    * @param{bool}q 指定是否为密文添加标点符号，默认 true/添加;
    * @param{int}r 密文算法的随机程度，越大随机性越强，默认 50，最大100，超过100将会出错;
    */
-  Input_Next(input, mode, key = "ABRACADABRA", q = true , r = 50) {
+  Input_Next(input, mode, key = "ABRACADABRA", q = true, r = 50) {
     if (this.#input == Abracadabra.UINT8) {
       //如果指定输入类型是UINT8
       if (Object.prototype.toString.call(input) != "[object Uint8Array]") {
         throw "Unexpected Input Type";
       }
-        if(mode == Abracadabra.ENCRYPT){
-          let Nextinput = new Object();
-          Nextinput.output = input;
-          this.#res = Util_Next.enMap(Nextinput, key, q, r);
-        }else if(mode == Abracadabra.DECRYPT){
-          let Nextinput = new Object();
-          Nextinput.output = input;
-          this.#res = Util_Next.deMap(Nextinput, key);
-        }
-        return 0;
-
+      if (mode == Abracadabra.ENCRYPT) {
+        let Nextinput = new Object();
+        Nextinput.output = input;
+        this.#res = Util_Next.enMap(Nextinput, key, q, r);
+      } else if (mode == Abracadabra.DECRYPT) {
+        let Nextinput = new Object();
+        Nextinput.output = input;
+        this.#res = Util_Next.deMap(Nextinput, key);
+      }
+      return 0;
     } else if (this.#input == Abracadabra.TEXT) {
       //如果指定输入类型是TEXT
       if (Object.prototype.toString.call(input) != "[object String]") {
         throw "Unexpected Input Type";
       }
-        let Nextinput = new Object();
-        Nextinput.output = Util.stringToUint8Array(input);
-        if(mode == Abracadabra.ENCRYPT){
-          this.#res = Util_Next.enMap(Nextinput, key, q, r);
-        }else if(mode == Abracadabra.DECRYPT){
-          this.#res = Util_Next.deMap(Nextinput, key);
-        }
-        return 0;
+      let Nextinput = new Object();
+      Nextinput.output = Util.stringToUint8Array(input);
+      if (mode == Abracadabra.ENCRYPT) {
+        this.#res = Util_Next.enMap(Nextinput, key, q, r);
+      } else if (mode == Abracadabra.DECRYPT) {
+        this.#res = Util_Next.deMap(Nextinput, key);
+      }
+      return 0;
     }
     return 0;
   }
-
 }

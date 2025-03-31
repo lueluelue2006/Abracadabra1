@@ -542,22 +542,22 @@ function CheckLuhnBit(Data) {
   }
 }
 
-function RemovePadding(Base64String){
+function RemovePadding(Base64String) {
   let PaddingCount = 0;
-  for(let i = Base64String.length - 1; i >= Base64String.length - 4 ;i--){
-    if(Base64String[i] == "="){
-      PaddingCount ++;
+  for (let i = Base64String.length - 1; i >= Base64String.length - 4; i--) {
+    if (Base64String[i] == "=") {
+      PaddingCount++;
     }
   }
-  return Base64String.slice(0,Base64String.length - PaddingCount);
+  return Base64String.slice(0, Base64String.length - PaddingCount);
 }
 
-function AddPadding(Base64String){
-  if(Base64String.length % 4 == 3 ){
+function AddPadding(Base64String) {
+  if (Base64String.length % 4 == 3) {
     return Base64String + "=";
-  }else if(Base64String.length % 4 == 2 ){
+  } else if (Base64String.length % 4 == 2) {
     return Base64String + "==";
-  }else{
+  } else {
     return Base64String;
   }
 }
@@ -586,7 +586,7 @@ function setCharOnIndex(string, index, char) {
 }
 
 function GetRandomIndex(length) {
-  let MT = new MersenneTwister(Math.floor(Math.random() * 1000000000))
+  let MT = new MersenneTwister(Math.floor(Math.random() * 1000000000));
   let Rand = Math.floor(MT.random() * length);
 
   return Rand;
