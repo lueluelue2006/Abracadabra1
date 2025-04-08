@@ -1,3 +1,15 @@
+/*
+ * Copyright (C) 2025 SheepChef (a.k.a. Haruka Hokuto)
+ *
+ * 这是一个自由软件。
+ * 在遵守AIPL-1.1许可证的前提下，
+ * 你可以自由复制，修改，分发，使用它。
+ *
+ * 查阅 Academic Innovation Protection License(AIPL) 来了解更多 .
+ * 本作品应随附一份完整的 AIPL-1.1 许可证全文。
+ *
+ */
+
 // 这是在编译后附加到Artifact后面的额外内容
 // 使得Javy可以将其编译成WASM
 

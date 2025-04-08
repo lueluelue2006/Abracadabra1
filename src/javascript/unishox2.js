@@ -25,6 +25,10 @@
  * - Minor fixes.
  */
 
+/*
+ * 本文件不适用AIPL-1.1许可证，遵循其原有许可证。
+ */
+
 export var USX_HCODES_DFLT = new Uint8Array([0x00, 0x40, 0x80, 0xc0, 0xe0]);
 export var USX_HCODE_LENS_DFLT = new Uint8Array([2, 2, 2, 3, 3]);
 export var USX_FREQ_SEQ_DFLT = ['": "', '": ', "</", '="', '":"', "://"];

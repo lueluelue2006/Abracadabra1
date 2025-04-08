@@ -1,18 +1,12 @@
 /*
- * Copyright (C) 2024 SheepChef (a.k.a. Haruka Hokuto)
+ * Copyright (C) 2025 SheepChef (a.k.a. Haruka Hokuto)
  *
- * This program is free software:
- * you can redistribute it and/or modify it under the terms of
- * as published by the Free Software Foundation, version 3.
+ * 这是一个自由软件。
+ * 在遵守AIPL-1.1许可证的前提下，
+ * 你可以自由复制，修改，分发，使用它。
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- *
- * See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with this program.
- * If not, see <https://www.gnu.org/licenses/>.
+ * 查阅 Academic Innovation Protection License(AIPL) 来了解更多 .
+ * 本作品应随附一份完整的 AIPL-1.1 许可证全文。
  *
  */
 
@@ -23,6 +17,9 @@
  * Some of its code need to be altered in order to achieve certain purposes.
  * Unishox2 was Licensed under the Apache License, Version 2.0.
  * Copyright (C) 2020 Siara Logics (cc)
+ * 
+ * 本作品中包含的 Unishox2 不适用 AIPL-1.1 许可证。
+ * 使用 Unishox2 须遵守其原始许可证。
  *
  */
 

@@ -11,8 +11,8 @@
 </div>
 
 <div align=center>
-  
-![License](https://img.shields.io/github/license/SheepChef/Abracadabra?color=yellow)
+
+[<img src="https://img.shields.io/badge/license-AIPL%201.1-yellow"/>](LICENSE.md)
 ![JavaScript](https://img.shields.io/badge/lang-JavaScript-orange)
 ![WASM](https://img.shields.io/badge/binary-WASM-b33bb3)
 
@@ -38,6 +38,9 @@
 请查阅 [**部署指南**](DEPLOY.md) 快速开始使用本项目。
 
 要深入了解本项目的设计思路，内部机制和最佳实践，请查阅 [**细节和使用指南**](https://github.com/SheepChef/Abracadabra/blob/main/USAGE.md)
+
+**本项目受私有许可证保护**，使用本项目则默认视为同意并遵守相关条款。  
+查阅 [**AIPL-1.1 许可**](LICENSE.md) 来了解详细信息。
 
 ## 特性
 
