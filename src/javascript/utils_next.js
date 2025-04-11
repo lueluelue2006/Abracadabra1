@@ -1300,9 +1300,14 @@ export function enMap(input, key, q, r, p, l) {
         //识别到段落分隔符
         if (!hasSpecialEndSymbol) {
           hasSpecialEndSymbol = true;
-          TempStr1 = TempStr1 + "。\n\n";
+          TempStr1 = TempStr1 + "。";
+          if (i != size) {
+            TempStr1 = TempStr1 + "\n\n";
+          }
         } else {
-          TempStr1 = TempStr1 + "\n\n";
+          if (i != size) {
+            TempStr1 = TempStr1 + "\n\n";
+          }
         }
       } else if (Sentence[j][k] == "Q") {
         //倒数第二个句式禁止出现句号和问号
