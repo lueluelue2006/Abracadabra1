@@ -26,6 +26,8 @@
   "key":"",    //加密密钥，一个字符串 //如果缺省，自动使用默认值
   "q":bool,    //OLD模式下，决定是否添加标志位 | NEXT模式下，决定输出密文是否有标点符号
   "r":number,  //仅NEXT模式下需要：算法的随机程度，越大随机性越强，默认 50，最大100，超过100将会出错;
+  "p":bool,    //仅NEXT模式下需要：尽可能使用对仗的骈文句式; 与逻辑句式冲突
+  "l":bool,    //仅NEXT模式下需要：尽可能使用逻辑句式; 与骈文句式冲突
   
 }
 
@@ -63,7 +65,15 @@ function index(input) {
   if (input.method == "NEXT") {
     if (input.inputType == "TEXT") {
       let Abra = new Abracadabra(input.inputType, input.outputType);
-      Abra.Input_Next(input.input, input.mode, input.key, input.q, input.r);
+      Abra.Input_Next(
+        input.input,
+        input.mode,
+        input.key,
+        input.q,
+        input.r,
+        input.p,
+        input.l
+      );
       let Output = Abra.Output();
       if (input.outputType == "UINT8") {
         Output = uint8ArrayToBase64(Output);
@@ -72,7 +82,15 @@ function index(input) {
     } else if (input.inputType == "UINT8") {
       let Abra = new Abracadabra(input.inputType, input.outputType);
       let UINT8In = base64ToUint8Array(input.input);
-      Abra.Input_Next(UINT8In, input.mode, input.key, input.q, input.r);
+      Abra.Input_Next(
+        UINT8In,
+        input.mode,
+        input.key,
+        input.q,
+        input.r,
+        input.p,
+        input.l
+      );
       let Output = Abra.Output();
       if (input.outputType == "UINT8") {
         Output = uint8ArrayToBase64(Output);

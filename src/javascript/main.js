@@ -184,8 +184,18 @@ export class Abracadabra {
    * @param{string}key 指定密钥，默认是 ABRACADABRA;
    * @param{bool}q 指定是否为密文添加标点符号，默认 true/添加;
    * @param{int}r 密文算法的随机程度，越大随机性越强，默认 50，最大100，超过100将会出错;
+   * @param{bool}p 指定是否强制生成骈文密文，默认 false;
+   * @param{bool}l 指定是否强制生成逻辑密文，默认 false;
    */
-  Input_Next(input, mode, key = "ABRACADABRA", q = true, r = 50) {
+  Input_Next(
+    input,
+    mode,
+    key = "ABRACADABRA",
+    q = true,
+    r = 50,
+    p = false,
+    l = false
+  ) {
     if (this.#input == Abracadabra.UINT8) {
       //如果指定输入类型是UINT8
       if (Object.prototype.toString.call(input) != "[object Uint8Array]") {
@@ -194,7 +204,7 @@ export class Abracadabra {
       if (mode == Abracadabra.ENCRYPT) {
         let Nextinput = new Object();
         Nextinput.output = input;
-        this.#res = Util_Next.enMap(Nextinput, key, q, r);
+        this.#res = Util_Next.enMap(Nextinput, key, q, r, p, l);
       } else if (mode == Abracadabra.DECRYPT) {
         let Nextinput = new Object();
         Nextinput.output = input;
@@ -209,7 +219,7 @@ export class Abracadabra {
       let Nextinput = new Object();
       Nextinput.output = Util.stringToUint8Array(input);
       if (mode == Abracadabra.ENCRYPT) {
-        this.#res = Util_Next.enMap(Nextinput, key, q, r);
+        this.#res = Util_Next.enMap(Nextinput, key, q, r, p, l);
       } else if (mode == Abracadabra.DECRYPT) {
         this.#res = Util_Next.deMap(Nextinput, key);
       }
